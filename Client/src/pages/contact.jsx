@@ -37,7 +37,7 @@ export default function ContactPage() {
       {/* Department Contact Info */}
       <section className="py-20 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap items-center">
+          <div className="flex flex-wrap items-center px-0 lg:px-12">
             <div className="w-full lg:w-5/12 px-4 mr-auto ml-auto">
               <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Department Contact Information</h3>
               <div className="space-y-6">
@@ -123,7 +123,7 @@ export default function ContactPage() {
             <div className="w-full lg:w-6/12 px-4 mr-auto ml-auto mt-12 lg:mt-0">
               <div className="relative">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.1252655858164!2d88.4869!3d22.5764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDM0JzM1LjAiTiA4OMKwMjknMTIuOCJF!5e0!3m2!1sen!2sin!4v1616661315372!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed/v1/place?q=University+Of+Engineering+and+management+Kolkata&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
                   width="100%"
                   height="450"
                   style={{ border: 0, borderRadius: "0.5rem" }}

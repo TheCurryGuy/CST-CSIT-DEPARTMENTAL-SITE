@@ -37,7 +37,7 @@ export default function FacultyPage() {
         <div className="container relative mx-auto">
           <div className="items-center flex flex-wrap">
             <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
-              <div className="pr-12">
+              <div className="pt-10">
                 <h1 className="text-white font-bold text-5xl">Our Faculty</h1>
                 <p className="mt-4 text-lg text-gray-200">
                   Meet our distinguished faculty members who are experts in their respective fields
@@ -98,7 +98,7 @@ export default function FacultyPage() {
           </div>
 
           {/* Faculty Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-1 lg:px-20">
             {filteredFaculty.map((faculty) => (
               <div
                 key={faculty.id}
