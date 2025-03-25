@@ -16,7 +16,7 @@ export default function ContactPage() {
       <div className="relative pt-16 pb-32 flex content-center items-center justify-center h-[60vh]">
         <div
           className="absolute top-0 w-full h-full bg-center bg-cover"
-          style={{ backgroundImage: "url('/placeholder.svg?height=1080&width=1920')" }}
+          style={{ backgroundImage: "url('/pic.png?height=1080&width=1920')" }}
         >
           <span className="w-full h-full absolute opacity-75 bg-gradient-to-r from-blue-900 to-teal-800"></span>
         </div>

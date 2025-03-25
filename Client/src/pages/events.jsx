@@ -26,7 +26,7 @@ export default function EventsPage() {
         <div className="relative pt-16 pb-32 flex content-center items-center justify-center h-[60vh]">
           <div
             className="absolute top-0 w-full h-full bg-center bg-cover"
-            style={{ backgroundImage: "url('/event_banner.jpg')" }} // Replace '/event_banner.jpg' with your image path
+            style={{ backgroundImage: "url('/pic.png')" }} // Replace '/event_banner.jpg' with your image path
           >
             <span className="w-full h-full absolute opacity-75 bg-gradient-to-r from-blue-900 to-teal-800"></span>
           </div>

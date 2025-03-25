@@ -13,7 +13,7 @@ export default function Hero() {
     <div className="relative h-[90vh] overflow-hidden">
       <motion.div
         style={{ y, opacity, scale }}
-        className="absolute inset-0 bg-[url('/placeholder.svg?height=1080&width=1920')] bg-cover bg-center"
+        className="absolute inset-0 bg-[url('/pic.png?height=1080&width=1920')] bg-cover bg-center"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-blue-900/70 via-teal-800/60 to-black/80" />
 
