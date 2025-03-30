@@ -1,5 +1,3 @@
-"use client"
-
 import { motion } from "framer-motion"
 import { Users, BookOpen, Award, Building } from "lucide-react"
 import { stats } from "../utils/data"

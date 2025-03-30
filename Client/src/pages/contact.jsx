@@ -1,5 +1,3 @@
-"use client"
-
 import { Mail, Phone, MapPin, Send, Linkedin, Twitter } from "lucide-react"
 import { studentCoordinators, facultyContacts } from "../utils/data"
 import { useEffect } from "react"

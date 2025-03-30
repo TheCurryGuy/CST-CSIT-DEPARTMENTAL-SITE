@@ -1,10 +1,11 @@
-"use client"
-
 import { useState, useEffect } from "react"
 import { Link, useLocation } from "react-router-dom"
 import { motion, AnimatePresence } from "framer-motion"
 import { useStateContext } from "../context/state-context"
-import { Sun, Moon, Menu, X, ChevronDown, GraduationCap, Home, Info, Phone, Calendar } from "lucide-react"
+import { 
+  Sun, Moon, Menu, X, ChevronDown, GraduationCap, 
+  Home, Info, Phone, Calendar, BookOpen 
+} from "lucide-react"
 
 const years = [2022, 2023, 2024, 2025]
 
@@ -130,6 +131,11 @@ export default function Navbar() {
                 )}
               </AnimatePresence>
             </div>
+
+            {/* Subjects Link */}
+            <NavLink to="/subjects" icon={<BookOpen size={16} />} isScrolled={isScrolled}>
+              Subjects
+            </NavLink>
 
             <NavLink to="/contact" icon={<Phone size={16} />} isScrolled={isScrolled}>
               Contact
@@ -263,6 +269,11 @@ export default function Navbar() {
                 </AnimatePresence>
               </div>
 
+              {/* Mobile Subjects Link */}
+              <MobileNavLink to="/subjects" icon={<BookOpen size={18} />} onClick={() => setIsMobileMenuOpen(false)}>
+                Subjects
+              </MobileNavLink>
+
               <MobileNavLink to="/contact" icon={<Phone size={18} />} onClick={() => setIsMobileMenuOpen(false)}>
                 Contact
               </MobileNavLink>
@@ -302,4 +313,3 @@ function MobileNavLink({ to, children, icon, onClick }) {
     </Link>
   )
 }
-

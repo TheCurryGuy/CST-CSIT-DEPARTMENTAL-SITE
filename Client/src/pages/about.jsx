@@ -1,5 +1,3 @@
-"use client"
-
 import { Rocket, BookOpen, FlaskRoundIcon as Flask, Award } from "lucide-react"
 import { useEffect } from "react"
 

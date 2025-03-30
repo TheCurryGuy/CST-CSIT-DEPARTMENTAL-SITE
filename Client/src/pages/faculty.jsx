@@ -1,5 +1,3 @@
-"use client"
-
 import { useState, useEffect } from "react"
 import { Mail, Phone, MapPin, Linkedin, Twitter, BookOpen, Award, FileText, ExternalLink } from "lucide-react"
 import Modal from "../components/ui/modal"
