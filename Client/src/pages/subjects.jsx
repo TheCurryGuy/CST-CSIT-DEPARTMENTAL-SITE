@@ -6,8 +6,9 @@ export default function SubjectsPage() {
   const [expandedSemesters, setExpandedSemesters] = useState([1])
   const [searchQuery, setSearchQuery] = useState("")
   const [hasSearchResults, setHasSearchResults] = useState(false)
+  const [isManualToggle, setIsManualToggle] = useState(false)
 
-  // Filter and map subjects based on search query
+  // Filter subjects based on search query
   const filteredSubjects = subjectsData
     .map(semester => ({
       ...semester,
@@ -19,17 +20,15 @@ export default function SubjectsPage() {
     .filter(semester => semester.subjects.length > 0)
 
   useEffect(() => {
-    if (searchQuery.trim()) {
+    if (!isManualToggle && searchQuery.trim()) {
       const semestersWithMatches = filteredSubjects.map(s => s.id)
       setExpandedSemesters(semestersWithMatches)
       setHasSearchResults(semestersWithMatches.length > 0)
-    } else {
-      setExpandedSemesters([1])
-      setHasSearchResults(false)
     }
-  }, [searchQuery, filteredSubjects])
+  }, [searchQuery, filteredSubjects, isManualToggle])
 
   const toggleSemester = (semesterId) => {
+    setIsManualToggle(true)
     setExpandedSemesters(prev => 
       prev.includes(semesterId)
         ? prev.filter(id => id !== semesterId)
@@ -109,8 +108,7 @@ export default function SubjectsPage() {
                   {/* Semester Header */}
                   <button
                     onClick={() => toggleSemester(semester.id)}
-                    className="w-full flex items-center justify-between p-6 text-left focus:outline-none"
-                    disabled={semester.subjects.length === 0}
+                    className="w-full flex items-center justify-between p-6 text-left focus:outline-none hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
                   >
                     <div className="flex items-center">
                       <div className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 mr-4">
@@ -123,15 +121,13 @@ export default function SubjectsPage() {
                         </p>
                       </div>
                     </div>
-                    {semester.subjects.length > 0 && (
-                      <div className="text-blue-600 dark:text-blue-400">
-                        {expandedSemesters.includes(semester.id) ? (
-                          <ChevronUp size={24} />
-                        ) : (
-                          <ChevronDown size={24} />
-                        )}
-                      </div>
-                    )}
+                    <div className="text-blue-600 dark:text-blue-400">
+                      {expandedSemesters.includes(semester.id) ? (
+                        <ChevronUp size={24} />
+                      ) : (
+                        <ChevronDown size={24} />
+                      )}
+                    </div>
                   </button>
 
                   {/* Subjects Grid */}
@@ -213,7 +209,6 @@ export default function SubjectsPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              {/* Previous Year Papers Card */}
               <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 hover:shadow-lg transition-all duration-300">
                 <div className="flex items-center justify-center w-14 h-14 mx-auto mb-6 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400">
                   <Download size={24} />
@@ -235,7 +230,6 @@ export default function SubjectsPage() {
                 </div>
               </div>
 
-              {/* Reference Books Card */}
               <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 hover:shadow-lg transition-all duration-300">
                 <div className="flex items-center justify-center w-14 h-14 mx-auto mb-6 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400">
                   <Book size={24} />
@@ -255,7 +249,6 @@ export default function SubjectsPage() {
                 </div>
               </div>
 
-              {/* Lecture Notes Card */}
               <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 hover:shadow-lg transition-all duration-300">
                 <div className="flex items-center justify-center w-14 h-14 mx-auto mb-6 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400">
                   <FileText size={24} />
