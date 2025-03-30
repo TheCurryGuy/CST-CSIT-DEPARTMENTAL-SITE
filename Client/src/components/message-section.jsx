@@ -15,7 +15,7 @@ export default function MessageSection() {
             <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-teal-600 rounded-full blur-lg opacity-20 animate-pulse"></div>
             <div className="relative">
               <div className="aspect-square overflow-hidden rounded-full border-8 border-white dark:border-gray-700 shadow-xl">
-                <img src="/placeholder.svg?height=600&width=600" alt="HOD" className="w-full h-full object-cover" />
+                <img src="https://thk0zqcdijpzgdnr.public.blob.vercel-storage.com/hod-GTA3D3SbhmBiGZL0Lbzkxi0UtoTbxU.jpg" alt="HOD" className="w-full h-full object-cover" />
               </div>
               <div className="absolute -bottom-6 -right-6 bg-white dark:bg-gray-700 rounded-full p-4 shadow-lg">
                 <div className="bg-gradient-to-r from-blue-600 to-teal-600 rounded-full p-3">
@@ -57,7 +57,7 @@ export default function MessageSection() {
                 various departmental laboratories which provides them strong hands-on learning experience.
               </p>
               <div className="mt-8">
-                <p className="font-semibold text-gray-900 dark:text-white">Prof. Dr. Example Name</p>
+                <p className="font-semibold text-gray-900 dark:text-white">Prof. Dr. Maumita Chakraborty</p>
                 <p className="text-gray-500 dark:text-gray-400">Professor and HOD</p>
                 <p className="text-gray-500 dark:text-gray-400">Department of CST & CSIT</p>
               </div>

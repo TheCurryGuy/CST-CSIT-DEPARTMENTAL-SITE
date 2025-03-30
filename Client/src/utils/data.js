@@ -10,7 +10,7 @@ export const facultyMembers = [
       email: "maumita.chakraborty@uem.edu.in",
       phone: "+91 9088104604",
       office: "Room 101, CS Building",
-      image: "https://q3tt99cbr02qqrnr.public.blob.vercel-storage.com/df-Bt5QocKiqgsbgDvUOopRybYr1OqEeu.png",
+      image: "https://thk0zqcdijpzgdnr.public.blob.vercel-storage.com/hod-GTA3D3SbhmBiGZL0Lbzkxi0UtoTbxU.jpg",
       researchInterests: ["Graph Theory", "Data Structures and Algorithms", "Computer Networks","Blockchain Technology"],
       publications: [
         "Kumar, R., et al. (2023). 'Advances in Natural Language Processing'. IEEE Transactions on AI.",
@@ -70,7 +70,7 @@ export const facultyMembers = [
       email: "subhalaxmi.chakraborty@uem.edu.in",
       phone: "+91 9831188685",
       office: "Room 102, CS Building",
-      image: "https://q3tt99cbr02qqrnr.public.blob.vercel-storage.com/df-Bt5QocKiqgsbgDvUOopRybYr1OqEeu.png",
+      image: "https://thk0zqcdijpzgdnr.public.blob.vercel-storage.com/2-EuHThJGCti95jKS1yGhSztoRQBV9D6.jpeg",
       researchInterests: ["Blockchain Technology", "CyberSecurity", "Machine Learning", "Optical Fiber"],
       publications: [
         "Verma, S., et al. (2023). 'Big Data Analytics in Healthcare'. Journal of Data Science.",
@@ -130,7 +130,7 @@ export const facultyMembers = [
       email: "sudipta.basu@uem.edu.in",
       phone: "+91 9674335060",
       office: "Room 103, CS Building",
-      image: "https://q3tt99cbr02qqrnr.public.blob.vercel-storage.com/df-Bt5QocKiqgsbgDvUOopRybYr1OqEeu.png",
+      image: "https://thk0zqcdijpzgdnr.public.blob.vercel-storage.com/3-5VPEcnydYIXTctT9LlHT2bNhiu47r9.jpeg",
       researchInterests: ["Artificial Intelligence", "IOT", "Embedded Technology", "Solar Energy", "PV Metrology"],
       publications: [
         "Singh, A., et al. (2022). 'Design of a low-cost measuring and plotting device for photovoltaic modules'. Journal of Cybersecurity.",
@@ -190,7 +190,7 @@ export const facultyMembers = [
       email: "chiradeep.mukherjee@uem.edu.in",
       phone: "+91 9804244362",
       office: "Room 104, CS Building",
-      image: "https://q3tt99cbr02qqrnr.public.blob.vercel-storage.com/df-Bt5QocKiqgsbgDvUOopRybYr1OqEeu.png",
+      image: "https://thk0zqcdijpzgdnr.public.blob.vercel-storage.com/4-wz3aBhTDQwRv7ODjhkyhEVhfZaaPD1.jpeg",
       researchInterests: ["Artificial Intelligence", "Machine Learning", "Deep Learning","Embedded Systems","Quantum Computing"],
       publications: [
         "Sharma, P., et al. (2023). 'Microservices Architecture'. IEEE Software Engineering Conference.",
@@ -250,7 +250,7 @@ export const facultyMembers = [
       email: "sankhadeep.chatterjee@uem.edu.in",
       phone: "+91 8910874737",
       office: "Room 105, CS Building",
-      image: "https://q3tt99cbr02qqrnr.public.blob.vercel-storage.com/df-Bt5QocKiqgsbgDvUOopRybYr1OqEeu.png",
+      image: "https://thk0zqcdijpzgdnr.public.blob.vercel-storage.com/5-9Hg1lGs6pD36zRVFZrNtqDqoK6p5Mn.jpeg",
       researchInterests: ["Artificial Intelligence","Machine Learning", "Deep Learning", "Metaheuristics"],
       publications: [
         "Patel, V., et al. (2022). '5G Network Architecture'. IEEE Communications Magazine.",
@@ -310,7 +310,7 @@ export const facultyMembers = [
       email: "srilekha.mukherjee@uem.edu.in",
       phone: "+91 9432253556",
       office: "Room 106, CS Building",
-      image: "https://q3tt99cbr02qqrnr.public.blob.vercel-storage.com/df-Bt5QocKiqgsbgDvUOopRybYr1OqEeu.png",
+      image: "https://thk0zqcdijpzgdnr.public.blob.vercel-storage.com/6-f08reBlscZnyJAR5XkQ3upVqAnBKD7.jpeg",
       researchInterests: ["Information Security", "Image Steganography", "Data Structures"],
       publications: [
         "Gupta, N., et al. (2023). 'User Experience in Mobile Applications'. ACM CHI Conference.",
@@ -370,7 +370,7 @@ export const facultyMembers = [
       email: "rajendrani.mukherjee@uem.edu.in",
       phone: "+91 8777051141",
       office: "Room 201, IT Building",
-      image: "https://q3tt99cbr02qqrnr.public.blob.vercel-storage.com/df-Bt5QocKiqgsbgDvUOopRybYr1OqEeu.png",
+      image: "https://thk0zqcdijpzgdnr.public.blob.vercel-storage.com/7-KJu4EdOwDDKzGdRARGHC66GoZmH93V.jpeg",
       researchInterests: ["Machine Learning", "Genetic Algorithm", "Software Engineering", "Optimization Heuristics"],
       publications: [
         "Mehta, R., et al. (2022). 'NoSQL Database Performance'. ACM SIGMOD Conference.",
@@ -430,7 +430,7 @@ export const facultyMembers = [
       email: "pradipta.sarkar@uem.edu.in",
       phone: "+91 9433443926",
       office: "Room 204, IT Building",
-      image: "https://q3tt99cbr02qqrnr.public.blob.vercel-storage.com/df-Bt5QocKiqgsbgDvUOopRybYr1OqEeu.png",
+      image: "https://thk0zqcdijpzgdnr.public.blob.vercel-storage.com/8-rIdNGaXjjHKfy38w0BhL6khkJX9wyu.jpeg",
       researchInterests: ["Data Science", "Data Analytics", "Machine Learning"],
       publications: [
         "Kapoor, M., et al. (2023). 'Cross-platform Mobile Mobile Development'. IEEE Mobile Computing Conference.",
@@ -470,7 +470,7 @@ export const facultyMembers = [
       email: "sanjukta.mishra@uem.edu.in",
       phone: "+91 8337045860",
       office: "Room 203, IT Building",
-      image: "https://q3tt99cbr02qqrnr.public.blob.vercel-storage.com/df-Bt5QocKiqgsbgDvUOopRybYr1OqEeu.png",
+      image: "https://thk0zqcdijpzgdnr.public.blob.vercel-storage.com/9-rkP65z0pKZwoRXwB5u3j4c8qqd61lP.jpeg",
       researchInterests: ["Machine Learning", "Image Processing", "Database Management"],
       publications: [
         "Joshi, S., et al. (2022). 'Progressive Web Applications'. ACM Web Conference.",
@@ -529,7 +529,7 @@ export const facultyMembers = [
       email: "sudipta.sikdar@uem.edu.in",
       phone: "+91 7278886140",
       office: "Room 202, IT Building",
-      image: "https://q3tt99cbr02qqrnr.public.blob.vercel-storage.com/df-Bt5QocKiqgsbgDvUOopRybYr1OqEeu.png",
+      image: "https://thk0zqcdijpzgdnr.public.blob.vercel-storage.com/10-KRxFieUOodANZ9sVyS98zD7CZ93Tk5.jpeg",
       researchInterests: ["Embedded System", "Internet Of Things", "TinyML", "Biosensing"],
       publications: [
         "Desai, A., et al. (2023). 'Cloud Security Frameworks'. IEEE Cloud Computing Conference.",
@@ -562,7 +562,7 @@ export const facultyMembers = [
       email: "Anirban.Ganguly@uem.edu.in",
       phone: "+91 8582805315",
       office: "Room 205, IT Building",
-      image: "https://q3tt99cbr02qqrnr.public.blob.vercel-storage.com/df-Bt5QocKiqgsbgDvUOopRybYr1OqEeu.png",
+      image: "https://thk0zqcdijpzgdnr.public.blob.vercel-storage.com/11-uQCr9AR0OLohjvnZ5da6fQoJWDiSBj.jpeg",
       researchInterests: ["VLSI Design", "Deep Learning", "Control Systems", "Neuromorphic Computing"],
       publications: [
         "Kumar, A., et al. (2022). 'IoT in Smart Cities'. IEEE IoT Journal.",
@@ -622,7 +622,7 @@ export const facultyMembers = [
       email: "debanjana.dattamitra@uem.edu.in",
       phone: "+91 9674033751",
       office: "Room 206, IT Building",
-      image: "https://q3tt99cbr02qqrnr.public.blob.vercel-storage.com/df-Bt5QocKiqgsbgDvUOopRybYr1OqEeu.png",
+      image: "https://thk0zqcdijpzgdnr.public.blob.vercel-storage.com/12-PFqihY7PQLqZcUIk1s4kWUAiU5I11h.jpeg",
       researchInterests: ["Deep Learning", "Analog Design Automation", "Artificial Intelligence"],
       publications: [
         "Singh, K., et al. (2023). 'Efficient Graph Algorithms'. ACM Transactions on Algorithms.",
@@ -682,7 +682,7 @@ export const facultyMembers = [
       email: "Arpita.Sahachowdhury@uem.edu.in",
       phone: "+91 98306 77260",
       office: "Room 206, IT Building",
-      image: "https://q3tt99cbr02qqrnr.public.blob.vercel-storage.com/df-Bt5QocKiqgsbgDvUOopRybYr1OqEeu.png",
+      image: "https://thk0zqcdijpzgdnr.public.blob.vercel-storage.com/13-8yOwtIKrQECGUWdGc7qKSmklmpiSJx.jpeg",
       researchInterests: ["Image Processing", "Pattern Recognition", "Database Management"],
       publications: [
         "Singh, K., et al. (2023). 'Efficient Graph Algorithms'. ACM Transactions on Algorithms.",
@@ -742,7 +742,7 @@ export const facultyMembers = [
       email: "Kamalika.Bhowal@uem.edu.in",
       phone: "+91 9581839829",
       office: "Room 206, IT Building",
-      image: "https://q3tt99cbr02qqrnr.public.blob.vercel-storage.com/df-Bt5QocKiqgsbgDvUOopRybYr1OqEeu.png",
+      image: "https://thk0zqcdijpzgdnr.public.blob.vercel-storage.com/14-o7IzK8bmDUWCASv6OeqjBkawj4ZcmO.jpeg",
       researchInterests: ["Data Security","Blockchain Network", "Edge Computing", "Consensus Mechanism"],
       publications: [
         "Singh, K., et al. (2023). 'Efficient Graph Algorithms'. ACM Transactions on Algorithms.",
@@ -1204,25 +1204,25 @@ export const facultyMembers = [
       email: "pradipta.sarkar@uem.edu.in",
       phone: "+91 9433443926",
       office: "Room 101, CS Building",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "https://thk0zqcdijpzgdnr.public.blob.vercel-storage.com/8-rIdNGaXjjHKfy38w0BhL6khkJX9wyu.jpeg",
     },
     {
       id: 2,
-      name: "Prof. Dr. Srilekha Mukherjee",
+      name: "Prof. Sudipta Sikdar",
       position: "Assistant Professor",
-      email: "srilekha.mukherjee@uem.edu.in",
+      email: "sudipta.sikdar@uem.edu.in",
       phone: "+91 9432253556",
       office: "Room 102, CS Building",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "https://thk0zqcdijpzgdnr.public.blob.vercel-storage.com/10-KRxFieUOodANZ9sVyS98zD7CZ93Tk5.jpeg",
     },
     {
       id: 3,
-      name: "Prof. Dr. Sankhadeep Chatterjee",
+      name: "Prof. Sanjukta Mishra",
       position: "Assistant Professor",
-      email: "sankhadeep.chatterjee@uem.edu.in",
+      email: "sanjukta.mishra@uem.edu.in",
       phone: "+91 8910874737",
       office: "Room 103, CS Building",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "https://thk0zqcdijpzgdnr.public.blob.vercel-storage.com/9-rkP65z0pKZwoRXwB5u3j4c8qqd61lP.jpeg",
     },
   ]
   
@@ -1230,31 +1230,31 @@ export const facultyMembers = [
   export const homeFaculty = [
     {
       id: 1,
-      name: "Prof.Dr.Maumita Chakraborty",
+      name: "Prof. Dr. Maumita Chakraborty",
       role: "Professor  & HOD",
       specialization: "Blockchain Technology, DSA",
-      image: "https://q3tt99cbr02qqrnr.public.blob.vercel-storage.com/df-Bt5QocKiqgsbgDvUOopRybYr1OqEeu.png",
+      image: "https://thk0zqcdijpzgdnr.public.blob.vercel-storage.com/hod-GTA3D3SbhmBiGZL0Lbzkxi0UtoTbxU.jpg",
     },
     {
       id: 2,
       name: "Prof. Dr. Subhalaxmi Chakraborty",
       role: "Professor & Assistant HOD",
       specialization: "Blockchain, CyberSecurity, COA",
-      image: "https://q3tt99cbr02qqrnr.public.blob.vercel-storage.com/df-Bt5QocKiqgsbgDvUOopRybYr1OqEeu.png",
+      image: "https://thk0zqcdijpzgdnr.public.blob.vercel-storage.com/2-EuHThJGCti95jKS1yGhSztoRQBV9D6.jpeg",
     },
     {
       id: 3,
       name: "Prof. Dr. Sudipta Basu Pal",
       role: "Associate Professor",
       specialization: "OS, Internet Of Things, OOPS",
-      image: "https://q3tt99cbr02qqrnr.public.blob.vercel-storage.com/df-Bt5QocKiqgsbgDvUOopRybYr1OqEeu.png",
+      image: "https://thk0zqcdijpzgdnr.public.blob.vercel-storage.com/3-5VPEcnydYIXTctT9LlHT2bNhiu47r9.jpeg",
     },
     {
       id: 4,
       name: "Prof. Dr. Chiradeep Mukherjee",
       role: "Assistant Professor",
       specialization: "AI & ML, NLP, COA",
-      image: "https://q3tt99cbr02qqrnr.public.blob.vercel-storage.com/df-Bt5QocKiqgsbgDvUOopRybYr1OqEeu.png",
+      image: "https://thk0zqcdijpzgdnr.public.blob.vercel-storage.com/4-wz3aBhTDQwRv7ODjhkyhEVhfZaaPD1.jpeg",
     },
   ]
   
