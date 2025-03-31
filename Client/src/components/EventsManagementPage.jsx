@@ -192,7 +192,7 @@ const EventPage = () => {
 
     return (
 
-        <div className="relative pt-16 pb-32 h-[70vh] container">
+        <div className="mt-32 container mx-auto p-4 md:p-8">
             <div className="flex justify-between items-center mb-8">
                  {/* Page Title */}
                 <h1 className="text-3xl font-bold text-gray-800 dark:text-blue-100">Event Management</h1>
