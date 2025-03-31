@@ -767,7 +767,7 @@ import axios from "axios";
 //       ],
 //     },
 //   ]
-const API_BASE_URL = "http://cst-csit-server.vercel.app/api";
+const API_BASE_URL = "https://cst-csit-server.vercel.app/api";
 
 export const fetchFacultyData = async () => {
     try {

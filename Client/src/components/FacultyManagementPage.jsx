@@ -3,7 +3,7 @@ import { FaEdit, FaTrashAlt, FaPlus, FaTimes, FaUserPlus, FaGlobe, FaLinkedin, F
 import { MdEmail, MdPhone } from 'react-icons/md';
 
 
-const API_BASE_URL = 'http://localhost:3000/api';
+const API_BASE_URL = 'https://cst-csit-server.vercel.app/api';
 
 // --- Faculty Modal Component ---
 const FacultyModal = ({ isOpen, onClose, onSubmit, initialData = null, mode }) => {
