@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import { FaEdit, FaTrashAlt, FaPlus, FaTimes, FaUserPlus, FaGlobe, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { MdEmail, MdPhone } from 'react-icons/md';

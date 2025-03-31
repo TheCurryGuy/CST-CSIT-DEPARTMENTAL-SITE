@@ -31,7 +31,21 @@ const FacultySchema = new mongoose.Schema({
 }, {
     timestamps: true,
 });
+const eventSchema = new mongoose.Schema({
+    title: { type: String, required: true },
+    date: { type: String, required: true },
+    time: { type: String, required: true },
+    location: { type: String, required: true },
+    description: { type: String, required: true },
+    image: { type: String },
+    attendees: { type: Number },
+    category: { type: String, required: true },
+    year: { type: Number, required: true },
+    semester: { type: String, required: true, enum: ['odd', 'even'] }
+}, { timestamps: true });
+
+const Event = mongoose.model('Event', eventSchema);
 
 const Faculty = mongoose.model('Faculty', FacultySchema);
 
-module.exports = Faculty;
+module.exports = { Faculty, Event };

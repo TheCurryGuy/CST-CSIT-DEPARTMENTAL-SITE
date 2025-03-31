@@ -9,6 +9,7 @@ import EventsPage from "./pages/events"
 import "./globals.css"
 import SubjectsPage from "./pages/subjects"
 import FacultyManagementPage from "./components/FacultyManagementPage"
+import EventPage from "./components/EventsManagementPage"
 
 export default function App() {
   return (
@@ -22,7 +23,8 @@ export default function App() {
             <Route path="faculty" element={<FacultyPage />} />
             <Route path="subjects" element={<SubjectsPage/>}/>
             <Route path="events/:year/:semester" element={<EventsPage />} />
-            <Route path="admin" element= {<FacultyManagementPage/>}/>
+            <Route path="admin/faculties" element= {<FacultyManagementPage/>}/>
+            <Route path="admin/events" element= {<EventPage/>}/>
           </Route>
         </Routes>
       </StateProvider>
