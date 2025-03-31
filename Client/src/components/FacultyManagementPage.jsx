@@ -1,11 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import axios from 'axios';
 import { FaEdit, FaTrashAlt, FaPlus, FaTimes, FaUserPlus, FaGlobe, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { MdEmail, MdPhone } from 'react-icons/md';
 
-
 const API_BASE_URL = 'https://cst-csit-server.vercel.app/api';
 
-// --- Faculty Modal Component ---
 const FacultyModal = ({ isOpen, onClose, onSubmit, initialData = null, mode }) => {
     const defaultFormData = {
         name: '', position: '', specialization: '', education: '', experience: '',
@@ -89,12 +88,11 @@ const FacultyModal = ({ isOpen, onClose, onSubmit, initialData = null, mode }) =
                         className="text-gray-500 hover:text-gray-800 transition-colors"
                         aria-label="Close modal"
                     >
-                        <FaTimes size={22} /> {/* Adjusted size slightly */}
+                        <FaTimes size={22} />
                     </button>
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-5">
-                    {/* Form fields remain the same, only icon components within them change */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4">
                          <InputField label="Name" name="name" value={formData.name} onChange={handleChange} required />
                          <InputField label="Position" name="position" value={formData.position} onChange={handleChange} />
@@ -114,7 +112,6 @@ const FacultyModal = ({ isOpen, onClose, onSubmit, initialData = null, mode }) =
                     <fieldset className="border border-gray-300 p-4 rounded-md">
                         <legend className="text-sm font-medium text-gray-700 px-2">Social Links</legend>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-3 mt-2">
-                             {/* Use react-icons components */}
                              <InputField icon={<FaLinkedin size={16} className="text-blue-700" />} label="LinkedIn" name="socialLinks.linkedin" type="url" value={formData.socialLinks.linkedin} onChange={handleChange} placeholder="https://linkedin.com/in/..." small />
                              <InputField icon={<FaTwitter size={16} className="text-sky-500" />} label="Twitter" name="socialLinks.twitter" type="url" value={formData.socialLinks.twitter} onChange={handleChange} placeholder="https://twitter.com/..." small />
                              <InputField icon={<FaGlobe size={16} className="text-gray-600" />} label="Website" name="socialLinks.website" type="url" value={formData.socialLinks.website} onChange={handleChange} placeholder="https://..." small />
@@ -132,7 +129,7 @@ const FacultyModal = ({ isOpen, onClose, onSubmit, initialData = null, mode }) =
                                         className="absolute top-2 right-2 text-red-400 hover:text-red-600 opacity-0 group-hover:opacity-100 transition-opacity"
                                         aria-label="Remove paper"
                                     >
-                                        <FaTrashAlt size={14} /> {/* Adjusted size */}
+                                        <FaTrashAlt size={14} />
                                     </button>
                                      <InputField label="Title" value={paper.title} onChange={(e) => handleResearchPaperChange(index, 'title', e.target.value)} small />
                                      <InputField label="Authors" value={paper.authors} onChange={(e) => handleResearchPaperChange(index, 'authors', e.target.value)} small />
@@ -174,7 +171,6 @@ const FacultyModal = ({ isOpen, onClose, onSubmit, initialData = null, mode }) =
     );
 };
 
-// Helper components remain the same, they just render the icon passed as a prop
 const InputField = ({ label, name, type = 'text', value, onChange, required, placeholder, icon = null, small = false }) => (
     <div>
         <label htmlFor={name} className={`block text-xs font-medium text-gray-600 mb-1 ${small ? '' : 'sm:text-sm'}`}>{label}{required && <span className="text-red-500 ml-1">*</span>}</label>
@@ -210,8 +206,6 @@ const TextareaField = ({ label, name, value, onChange, required, rows = 3, place
     </div>
 );
 
-
-// --- Faculty Card Component ---
 const FacultyCard = ({ member, onEdit, onDelete }) => {
     return (
         <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-shadow duration-300 hover:shadow-xl flex flex-col border border-gray-200/80">
@@ -229,7 +223,7 @@ const FacultyCard = ({ member, onEdit, onDelete }) => {
                 <div className="text-xs text-gray-500 pt-2 space-y-1">
                      <p className="flex items-center">
                          <MdEmail className="h-3.5 w-3.5 mr-1.5 text-gray-400 flex-shrink-0" />
-                         <span className="truncate">{member.email}</span> {/* Added truncate */}
+                         <span className="truncate">{member.email}</span>
                     </p>
                     {member.phone && (
                          <p className="flex items-center">
@@ -259,17 +253,14 @@ const FacultyCard = ({ member, onEdit, onDelete }) => {
                     <FaEdit size={16} />
                 </button>
                 <button onClick={() => onDelete(member._id)} className="p-1.5 text-red-600 hover:text-red-800 hover:bg-red-100 rounded-full transition-colors duration-150" aria-label={`Delete ${member.name}`}>
-                     <FaTrashAlt size={15} /> {/* Adjusted size slightly */}
+                     <FaTrashAlt size={15} />
                 </button>
             </div>
         </div>
     );
 };
 
-
-// --- Main Page Component ---
 const FacultyManagementPage = () => {
-    // State and logic remain the same
     const [facultyList, setFacultyList] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -278,51 +269,95 @@ const FacultyManagementPage = () => {
     const [currentFaculty, setCurrentFaculty] = useState(null);
 
     const fetchFaculty = useCallback(async () => {
-        setLoading(true); setError(null);
+        setLoading(true);
+        setError(null);
         try {
-            const response = await fetch(`${API_BASE_URL}/faculty`);
-            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-            const data = await response.json();
-            if (data.success) setFacultyList(data.data || []);
-            else throw new Error(data.message || 'Failed to fetch faculty');
+            const response = await axios.get(`${API_BASE_URL}/faculty`);
+            if (response.data && response.data.success) {
+                setFacultyList(response.data.data || []);
+            } else {
+                throw new Error(response.data?.message || 'Failed to fetch faculty (API error)');
+            }
         } catch (err) {
-            console.error("Fetch error:", err); setError(err.message); setFacultyList([]);
-        } finally { setLoading(false); }
+            console.error("Fetch error:", err);
+            const message = err.response?.data?.message || err.message || 'Failed to fetch faculty';
+            setError(message);
+            setFacultyList([]);
+        } finally {
+            setLoading(false);
+        }
     }, []);
 
-    useEffect(() => { fetchFaculty(); }, [fetchFaculty]);
+    useEffect(() => {
+        fetchFaculty();
+    }, [fetchFaculty]);
 
-    const handleAddClick = () => { setModalMode('add'); setCurrentFaculty(null); setIsModalOpen(true); };
-    const handleEditClick = (facultyMember) => { setModalMode('edit'); setCurrentFaculty(facultyMember); setIsModalOpen(true); };
-    const handleCloseModal = () => { setIsModalOpen(false); setCurrentFaculty(null); };
+    const handleAddClick = () => {
+        setModalMode('add');
+        setCurrentFaculty(null);
+        setIsModalOpen(true);
+    };
+
+    const handleEditClick = (facultyMember) => {
+        setModalMode('edit');
+        setCurrentFaculty(facultyMember);
+        setIsModalOpen(true);
+    };
+
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
+        setCurrentFaculty(null);
+    };
 
     const handleDelete = async (id) => {
         if (window.confirm('Are you sure you want to delete this faculty member?')) {
-            setLoading(true);
+            setError(null);
             try {
-                 const response = await fetch(`${API_BASE_URL}/faculty/${id}`, { method: 'DELETE' });
-                 const data = await response.json();
-                 if (!response.ok || !data.success) throw new Error(data.message || 'Failed to delete');
-                 fetchFaculty();
+                const response = await axios.delete(`${API_BASE_URL}/faculty/${id}`);
+                if (response.data && response.data.success) {
+                    fetchFaculty();
+                } else {
+                    throw new Error(response.data?.message || 'Failed to delete (API error)');
+                }
             } catch (err) {
-                console.error("Delete error:", err); setError(err.message); setLoading(false);
+                console.error("Delete error:", err);
+                const message = err.response?.data?.message || err.message || 'Failed to delete';
+                setError(message);
             }
         }
     };
 
     const handleModalSubmit = async (formData) => {
         const url = modalMode === 'edit' ? `${API_BASE_URL}/faculty/${currentFaculty._id}` : `${API_BASE_URL}/faculty`;
-        const method = modalMode === 'edit' ? 'PUT' : 'POST';
-        if (!formData.name || !formData.email) { alert("Name and Email are required."); return; }
+        const method = modalMode === 'edit' ? 'put' : 'post';
 
-        setLoading(true); setError(null);
+        if (!formData.name || !formData.email) {
+            alert("Name and Email are required.");
+            return;
+        }
+
+        setLoading(true);
+        setError(null);
         try {
-            const response = await fetch(url, { method: method, headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(formData) });
-            const data = await response.json();
-            if (!response.ok || !data.success) throw new Error(data.message || `Failed to ${modalMode}`);
-            handleCloseModal(); fetchFaculty();
+            let response;
+            if (method === 'put') {
+                response = await axios.put(url, formData);
+            } else {
+                response = await axios.post(url, formData);
+            }
+
+            if (response.data && response.data.success) {
+                handleCloseModal();
+                fetchFaculty();
+            } else {
+                throw new Error(response.data?.message || `Failed to ${modalMode} (API error)`);
+            }
         } catch (err) {
-            console.error(`${modalMode} error:`, err); setError(err.message); alert(`Error: ${err.message}`); setLoading(false);
+            console.error(`${modalMode} error:`, err);
+            const message = err.response?.data?.message || err.message || `Failed to ${modalMode}`;
+            setError(message);
+            alert(`Error: ${message}`);
+            setLoading(false);
         }
     };
 
@@ -334,7 +369,7 @@ const FacultyManagementPage = () => {
                     onClick={handleAddClick}
                     className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-5 rounded-md inline-flex items-center shadow-sm hover:shadow-md transition-all duration-200"
                 >
-                    <FaPlus size={16} className="mr-2" /> {/* Use FaPlus */}
+                    <FaPlus size={16} className="mr-2" />
                     Add Member
                 </button>
             </div>
@@ -363,7 +398,6 @@ const FacultyManagementPage = () => {
 
              {!loading && !error && facultyList.length === 0 && (
                  <div className="text-center py-16">
-                      {/* Using FaUserPlus for empty state */}
                      <FaUserPlus className="mx-auto h-12 w-12 text-gray-300" />
                      <h3 className="mt-2 text-sm font-medium text-gray-900">No faculty members</h3>
                      <p className="mt-1 text-sm text-gray-500">Get started by adding a new faculty member.</p>
@@ -373,7 +407,7 @@ const FacultyManagementPage = () => {
                             type="button"
                             className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                         >
-                            <FaPlus size={16} className="-ml-1 mr-2" /> {/* Use FaPlus */}
+                            <FaPlus size={16} className="-ml-1 mr-2" />
                             Add Member
                         </button>
                     </div>

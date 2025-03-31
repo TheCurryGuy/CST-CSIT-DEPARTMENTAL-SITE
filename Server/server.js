@@ -18,12 +18,25 @@ mongoose.connect(MONGO_URI)
 
 const app = express();
 
-const corsOptions = {
-  origin: [
+const allowedOrigins = [
     'https://cst-csit.vercel.app',
-    'https://cst-csit-git-*.vercel.app', // Vercel preview deployments
-    'http://localhost:5173'  // Keep localhost for development
-  ],
+    'http://localhost:5173'
+];
+const corsOptions = {
+  origin: function (origin, callback) {
+    if (!origin) return callback(null, true);
+
+    if (allowedOrigins.indexOf(origin) !== -1) {
+      return callback(null, true);
+    }
+
+    const vercelPreviewRegex = /^https:\/\/cst-csit-git-.+\.vercel\.app$/;
+    if (vercelPreviewRegex.test(origin)) {
+        return callback(null, true);
+    }
+
+    return callback(new Error(`Origin '${origin}' not allowed by CORS`));
+  },
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
   allowedHeaders: [
     'Content-Type',
@@ -32,20 +45,12 @@ const corsOptions = {
     'X-Requested-With',
     'Accept',
     'Origin',
-    'X-File-Name', // For file uploads
-    'Content-Disposition', // For file downloads
-    'X-CSRF-Token', // If using CSRF protection
-    'X-HTTP-Method-Override' // For legacy systems
   ],
   exposedHeaders: [
-    'Content-Disposition', // For file download prompts
-    'X-Submission-ID', // Custom headers you might use
-    'X-RateLimit-Limit', // If using rate limiting
-    'X-RateLimit-Remaining'
+    'Content-Disposition',
   ],
   credentials: true,
-  maxAge: 86400, // 24h preflight cache
-  preflightContinue: false,
+  maxAge: 86400,
   optionsSuccessStatus: 204
 };
 
