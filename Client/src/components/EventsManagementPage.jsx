@@ -191,8 +191,12 @@ const EventPage = () => {
     if (error) return <div className="text-center p-10 text-red-700 dark:text-red-300 bg-red-100 dark:bg-red-900/30 border border-red-400 dark:border-red-600 rounded">{error}</div>;
 
     return (
+        <>
+        <div className='absolute bg-blue-500 dark:bg-inherit w-screen h-20'>
+        </div>
 
-        <div className="mt-32 container mx-auto p-4 md:p-8">
+        <div className="container mx-auto p-4 md:p-8">
+            <br/><br/><br/>
             <div className="flex justify-between items-center mb-8">
                  {/* Page Title */}
                 <h1 className="text-3xl font-bold text-gray-800 dark:text-blue-100">Event Management</h1>
@@ -338,6 +342,7 @@ const EventPage = () => {
             </Modal>
 
         </div>
+        </>
     );
 };
 
