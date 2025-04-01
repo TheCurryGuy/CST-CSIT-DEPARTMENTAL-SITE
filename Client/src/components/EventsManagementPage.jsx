@@ -225,7 +225,7 @@ const EventPage = () => {
                             <div key={event._id} className="bg-white dark:bg-gray-800 rounded-lg shadow-md dark:shadow-lg dark:shadow-blue-900/30 overflow-hidden flex flex-col">
                                 {event.image && (
                                     <img
-                                        src={event.image.startsWith('/') ? event.image : `/placeholder.svg?height=200&width=300`}
+                                        src={event.image? event.image : `/placeholder.svg?height=200&width=300`}
                                         alt={event.title}
                                         className="w-full h-48 object-cover"
                                         onError={(e) => { e.target.onerror = null; e.target.src='/placeholder.svg?height=200&width=300' }}
