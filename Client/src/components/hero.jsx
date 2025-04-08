@@ -11,11 +11,11 @@ export default function Hero() {
     <div className="relative h-[90vh] overflow-hidden">
       <motion.div
         style={{ y, opacity, scale }}
-        className="absolute inset-0 bg-[url('/pic.png?height=1080&width=1920')] bg-cover bg-center"
+        className="absolute inset-0 bg-[url('/pic.png?height=1080&width=1920')] bg-cover bg-center z-[-2]"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-blue-900/70 via-teal-800/60 to-black/80" />
+      <div className="absolute inset-0 bg-gradient-to-b from-blue-900/70 via-teal-800/60 to-black/80 z-[-1]" />
 
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4 z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -51,7 +51,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="flex flex-col sm:flex-row gap-4 mt-8"
+          className="flex flex-col sm:flex-row gap-4 mt-8 z-999"
         >
           <Link
             to="/about"
@@ -68,7 +68,7 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0">
+      <div className="absolute bottom-0 left-0 right-0 z-0">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full h-auto">
           <path
             fill="#ffffff"
@@ -81,4 +81,3 @@ export default function Hero() {
     </div>
   )
 }
-
