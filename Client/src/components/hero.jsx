@@ -35,7 +35,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-200"
         >
-          Department of Computer Science
+          Department of CST & CSIT
         </motion.h1>
 
         <motion.h2
@@ -44,7 +44,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-xl md:text-2xl mb-8 max-w-3xl"
         >
-          and Computer Science and Information Technology
+          A Department of University of Engineering & Management, Kolkata
         </motion.h2>
 
         <motion.div
@@ -53,15 +53,15 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="flex flex-col sm:flex-row gap-4 mt-8"
         >
-          <a
-            href="#about"
-            className="px-8 py-3 bg-gradient-to-r from-blue-600 to-teal-700 rounded-full font-medium hover:shadow-lg hover:shadow-blue-500/20 transition-all"
+          <Link
+            to="/about"
+            className="px-8 py-3 bg-gradient-to-r from-blue-600 to-teal-700 rounded-full font-medium hover:shadow-lg hover:shadow-blue-500/20 transition-all cursor-pointer"
           >
             Discover More
-          </a>
+          </Link>
           <Link
             to="/contact"
-            className="px-8 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full font-medium hover:bg-white/20 transition-all"
+            className="px-8 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full font-medium hover:bg-white/20 transition-all cursor-pointer"
           >
             Contact Us
           </Link>
